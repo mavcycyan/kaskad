@@ -153,7 +153,7 @@ $(document).ready(function (){
         item:1,
         loop:true,
         thumbItem:4,
-        controls: false,
+        controls: true,
         slideMargin:0,
         enableDrag: false,
         currentPagerPosition:'left',

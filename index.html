@@ -6,6 +6,7 @@
 	<title>Название сайта</title>
 	<link rel="stylesheet" type="text/css" href="css/lightslider.css" media="all" />
 	<link rel="stylesheet" type="text/css" href="css/lightgallery.css" media="all" />
+	<link rel="stylesheet" type="text/css" href="fancybox/jquery.fancybox.css" media="all" />
 	<link rel="stylesheet" type="text/css" href="css/style.css" media="all" />
 	<script type="text/javascript" src="js/jquery-1.9.0.min.js"></script>
 	<script type="text/javascript" src="js/lightgallery.js"></script>
@@ -43,13 +44,13 @@
 							<a class="tel" href="tel:+79107322054">+7 (910) 732-20-54</a>
 							<a class="mail" href="mailto:kaskad.vrn2016@gmail.com">kaskad.vrn2016@gmail.com</a>
 						</div>
-						<div class="basket flex">
+						<button type="button" class="basket flex">
 							<div class="icon_basket"><img src="images/icon_basket.png"><span>0</span></div>
 							<div>
 								<strong>Корзина</strong>
 								<span>0 товар(ов)</span>
 							</div>
-						</div>
+						</button>
 					</div>
 				</div>
 				<div class="nav flex jcsb aic">
@@ -446,4 +447,59 @@
 			</div>
 		</footer>
 	</div>
+	
+<div style="display:none;">
+    <div id="modal_oc" class="modal_oc" style="display: block;">
+        <div class="modal_oc-ttl">Купить в 1 клик</div>
+        <div class="modal_oc-form">
+            <form action="">
+                <div class="modal_oc-form-in">
+                    <input type="text" placeholder="Имя">
+                </div>                        
+                <div class="modal_oc-form-in">
+                    <input type="text" placeholder="+7 923 55">
+                </div> 
+                <div class="modal_oc-form-btn">
+                    <button type="submit"><span>Отправить заявку</span></button>
+                </div>                        
+            </form>
+        </div>
+    </div>    
+</div> 	
+		
+<div style="display:none;">
+    <div id="modal_bask" class="modal_bask" style="display: block;">
+        <div class="modal_bask-ttl">Товар <span></span> добавлен в корзину</div>
+        <div class="modal_bask-img"><img src="" alt=""></div>
+        <div class="modal_bask-form">
+            <form action="">
+                <div class="modal_bask-form-btn">
+                    <button type="button"><span>В корзину</span></button>
+                </div>  
+                <div class="modal_bask-form-btn-next">
+                    <button type="button"><span>Продолжить покупки</span></button>
+                </div>                        
+            </form>
+        </div>
+    </div>    
+</div> 	
+	<script src="fancybox/jquery.fancybox.pack.js" type="text/javascript"></script>
+	<script>
+    jQuery(document).ready(function($){	
+
+        $(".tovar .buy").fancybox({ 
+            href: '#modal_oc', 
+            wrapCSS: 'modal_oc_wp'
+        });  
+        $(".tovar .to-basket").click(function(){
+            $('.modal_bask-ttl span').text($(this).siblings("h4").text());
+            $('.modal_bask-img').html($(this).siblings(".img").html());
+        });
+        $(".tovar .to-basket").fancybox({ 
+            href: '#modal_bask', 
+            wrapCSS: 'modal_bask_wp'           
+        });
+        
+    });    
+    </script>
 </body>

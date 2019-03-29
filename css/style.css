@@ -119,6 +119,9 @@ align-items: flex-end;}
 	width: 178px;
 	font-size: 10px;
 	box-sizing: border-box;
+    border: 0;
+    cursor: pointer;
+    font-family: 'GothaProReg';
 }
 .icon_basket {
 	background: #fff;
@@ -169,7 +172,7 @@ align-items: flex-end;}
 .top_info > div {margin-left: 62px;}
 .top {padding: 6px 31px 4px;}
 header {margin-bottom: 13px;}
-.basket > div strong {margin-bottom: 2px;display: block;line-height: normal;}
+.basket > div strong {margin-bottom: 2px;display: block;line-height: normal;text-align: left;}
 nav ul li a {
 	text-decoration: none;
 	color: #fff;
@@ -373,7 +376,7 @@ nav ul li {margin-left: 47px;}
 	opacity: 1;
 }
 .lSAction > .lSNext {background: #fff url("../images/icon_next.png") no-repeat center;right: 0;}
-.lSAction > .lSPrev {background: #fff url("../images/icon_prev.png") no-repeat center;left: auto;right: 33px;top: 0;}
+.lSAction > .lSPrev {background: #fff url("../images/icon_prev.png") no-repeat center;left: 0;top: 50%;}
 .slider_hits .lSSlideWrapper {position: static;}
 .slider_hits .caption {margin-bottom: 13px;}
 .spec {padding-top: 31px;}
@@ -627,6 +630,7 @@ align-items: center;color: #bdbdbd;text-decoration: none;
 }
 .pagination li {margin: 0 5px;}
 .pagination a.active {color: #424242;font-family: 'GothaProMed';}
+.pagination.mt {margin-top: 30px;}
 .sort {}
 .sort select {    width: 137px;
     height: 29px;
@@ -800,4 +804,30 @@ span.date {font-size: 12px;color: #7f7f7f;display: block;margin: 10px 0;}
 	.red_link {margin-bottom: 15px;}
 	.news_list li {width: 49%;}
 	.catalog_o ul li {width: 100%;margin-right: 0;}
+}
+
+.modal_oc_wp * { box-sizing: border-box;}
+.modal_oc_wp .fancybox-skin { background: #fff; }
+.modal_oc_wp .fancybox-close { background: url('../img/cross.svg')no-repeat;width: 19px; height: 19px; top: 10px; right: 10px; }
+.modal_oc { padding: 40px 0px; }
+.modal_oc-ttl { font-size: 24px; font-weight: 700; text-align: center;} 
+.modal_oc-form { width: 100vw; max-width: 320px; margin-top: 15px; padding: 0 30px;}
+.modal_oc-form-in input { border: 1px solid #bdd9f2; width: 100%; padding: 10px 16px; margin-bottom: 15px; }
+.modal_oc-form-btn button { background: #ff5b54; background: -moz-linear-gradient(top, #ff5b54 0%, #ff615b 50%, #ff342b 77%, #ff332a 100%); background: -webkit-linear-gradient(top, #ff5b54 0%,#ff615b 50%,#ff342b 77%,#ff332a 100%); background: linear-gradient(to bottom, #ff5b54 0%,#ff615b 50%,#ff342b 77%,#ff332a 100%); filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff5b54', endColorstr='#ff332a',GradientType=0 ); border: none; font-family: inherit; color: #fff; text-decoration: none; text-align: center; width: 100%; height: 43px; border-bottom: 2px solid #cd0701; border-radius: 9px !important; display: block; cursor: pointer; display: block; line-height: 44px; margin: 6px auto 0; }
+
+.modal_bask_wp * { box-sizing: border-box;}
+.modal_bask_wp .fancybox-skin { background: #fff; }
+.modal_bask_wp .fancybox-close { background: url('../img/cross.svg')no-repeat;width: 19px; height: 19px; top: 10px; right: 10px; }
+.modal_bask { padding: 40px 0px; }
+.modal_bask-ttl { font-size: 20px;text-align: center; max-width: 320px;} 
+.modal_bask-ttl span { display: block; font-weight: 700;} 
+.modal_bask-img {  max-width: 320px; margin-top: 15px; text-align: center;} 
+.modal_bask-form { width: 100vw; max-width: 320px; margin-top: 15px; padding: 0 30px;}
+.modal_bask-form-in input { border: 1px solid #bdd9f2; width: 100%; padding: 10px 16px; margin-bottom: 15px; }
+.modal_bask-form-btn button { background: #ff5b54; background: -moz-linear-gradient(top, #ff5b54 0%, #ff615b 50%, #ff342b 77%, #ff332a 100%); background: -webkit-linear-gradient(top, #ff5b54 0%,#ff615b 50%,#ff342b 77%,#ff332a 100%); background: linear-gradient(to bottom, #ff5b54 0%,#ff615b 50%,#ff342b 77%,#ff332a 100%); filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff5b54', endColorstr='#ff332a',GradientType=0 ); border: none; font-family: inherit; color: #fff; text-decoration: none; text-align: center; width: 100%; height: 43px; border-bottom: 2px solid #cd0701; border-radius: 9px !important; display: block; cursor: pointer; display: block; line-height: 44px; margin: 6px auto 0; }
+.modal_bask-form-btn-next button { background: none; border: 1px solid #ff5b54; font-family: inherit; color: #000; text-decoration: none; text-align: center; width: 100%; height: 43px;border-radius: 9px !important; display: block; cursor: pointer; display: block; line-height: 44px; margin: 15px auto 0; }
+
+@media (max-width: 767px) {
+    .modal_oc-form { max-width: 250px; }
+    .modal_bask-form { max-width: 250px; }
 }
