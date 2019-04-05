@@ -376,7 +376,19 @@ nav ul li {margin-left: 47px;}
 	opacity: 1;
 }
 .lSAction > .lSNext {background: #fff url("../images/icon_next.png") no-repeat center;right: 0;}
-.lSAction > .lSPrev {background: #fff url("../images/icon_prev.png") no-repeat center;left: 0;top: 50%;}
+.lSAction > .lSPrev {background: #fff url("../images/icon_prev.png") no-repeat center;left: auto;right: 33px;top: 0;}
+.card_slider .slider_hits {width: 48.5%;position: relative;}
+.card_slider .slider_hits .lSAction {position: absolute;top: 10px;right: 29px;}
+.card_slider .slider_hits .lSAction > a {
+	width: 19px;
+	height: 20px;
+	border-radius: 50%;
+	top: 0;
+	margin-top: 0;
+	opacity: 1;
+}
+.card_slider .lSAction > .lSNext {background: #fff url("../images/icon_next.png") no-repeat center;right: 0;}
+.card_slider .lSAction > .lSPrev {background: #fff url("../images/icon_prev.png") no-repeat center;left: 0;top: 50%;}
 .slider_hits .lSSlideWrapper {position: static;}
 .slider_hits .caption {margin-bottom: 13px;}
 .spec {padding-top: 31px;}
